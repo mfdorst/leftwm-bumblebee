@@ -1,0 +1,24 @@
+#!/bin/bash
+
+SCRIPTPATH="$( cd "$(dirname "$0")" ; pwd -P )"
+SCRIPTPATH/down
+
+# Boot picom or compton if it exists
+if [ -x "$(command -v picom)"; then
+    picom &> /dev/null &
+elif [ -x "$(command -v compton)" ]; then
+  compton &> /dev/null & 
+fi
+
+echo "LoadTheme $SCRIPTPATH/theme.toml" > $XDG_RUNTIME_DIR/leftwm/commands.pipe
+
+# Boot polybar based on the number of monitors found
+if [ -x "$(command -v polybar)" ]; then
+  pkill polybar
+  monitors="$(polybar -m | sed s/:.*// | tac)"
+  while read -r display; do
+    MONITOR=$display polybar -c "$SCRIPTPATH/polybar.config" mainbar &> /dev/null &
+  done <<< "$monitors"
+  exit 0
+fi
+
