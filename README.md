@@ -1,4 +1,4 @@
-# LeftWM themes - Bumblebee
+# LeftWM theme - Bumblebee
 
 This theme is forked from [Coffee].
 
