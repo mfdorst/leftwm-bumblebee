@@ -1,4 +1,6 @@
-# LeftWM themes - Coffee
+# LeftWM themes - Bumblebee
+
+This theme is forked from [Coffee]
 
 If you want to use them copy them into:
 ~/.config/leftwm/themes
@@ -11,4 +13,5 @@ cp THEME_FROM_THIS_REPO .
 ln -s THEME_NAME current
 ```
 
-![](https://github.com/lex148/leftwm-coffee/raw/master/screenshot.jpg)
+[Coffee]: https://github.com/lex148/leftwm-coffee
+
