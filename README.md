@@ -1,16 +1,15 @@
 # LeftWM themes - Bumblebee
 
-This theme is forked from [Coffee]
+This theme is forked from [Coffee].
 
-If you want to use them copy them into:
-~/.config/leftwm/themes
-
-symlink the theme you want to try to current
+If you want to use this theme:
++ Clone this repo into `~/.config/leftwm/themes`
++ Symlink this theme to `current`
 
 ```bash
 cd ~/.config/leftwm/themes
-cp THEME_FROM_THIS_REPO .
-ln -s THEME_NAME current
+git clone https://github.com/mfdorst/leftwm-bumblebee Bumblebee
+ln -s $(pwd)/Bumblebee ~/.config/leftwm/themes/current
 ```
 
 [Coffee]: https://github.com/lex148/leftwm-coffee
